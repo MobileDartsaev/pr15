@@ -7,13 +7,60 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/sky"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/sky"
+        android:src="@drawable/sky"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/grass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/sun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/sun"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sun"
+        app:layout_constraintBottom_toTopOf="@+id/grass"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/grass"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/grass"
+        android:src="@drawable/grass"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+    android:id="@+id/clock"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/clock"
+    android:padding="10dp"
+    android:src="@drawable/clock"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintVertical_bias="0"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="16dp" />
+
+    <ImageView
+        android:id="@+id/hour_hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/clock"
+        android:padding="10dp"
+        android:src="@drawable/hour_hand"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
